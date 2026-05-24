@@ -1,0 +1,17 @@
+=== MOS CIVILIAN JOB FREQUENCY SUMMARY ===
+
+Fuel Technician: 1
+Logistics Coordinator: 1
+Supply Chain Assistant: 1
+HR Assistant: 1
+Recruiting Coordinator: 1
+Office Administrator: 1
+IT Support: 1
+Systems Technician: 1
+Help Desk Analyst: 1
+Medical Assistant: 1
+EMT: 1
+Patient Care Technician: 1
+Accounting Clerk: 1
+Budget Analyst Assistant: 1
+Payroll Technician: 1

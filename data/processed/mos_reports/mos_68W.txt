@@ -1,0 +1,14 @@
+=== MOS REPORT: 68W ===
+Title: Combat Medic Specialist
+
+Civilian Job Matches:
+ - Medical Assistant
+ - EMT
+ - Patient Care Technician
+
+Average Salary: $45,000
+
+Key Skills:
+ - medical care
+ - triage
+ - patient support

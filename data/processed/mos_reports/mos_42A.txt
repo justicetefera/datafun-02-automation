@@ -1,0 +1,14 @@
+=== MOS REPORT: 42A ===
+Title: Human Resources Specialist
+
+Civilian Job Matches:
+ - HR Assistant
+ - Recruiting Coordinator
+ - Office Administrator
+
+Average Salary: $52,000
+
+Key Skills:
+ - administration
+ - records management
+ - customer service

@@ -1,0 +1,17 @@
+=== MOS SKILL FREQUENCY SUMMARY ===
+
+logistics: 1
+inventory: 1
+equipment operation: 1
+administration: 1
+records management: 1
+customer service: 1
+networking: 1
+security: 1
+troubleshooting: 1
+medical care: 1
+triage: 1
+patient support: 1
+finance: 1
+budgeting: 1
+data entry: 1
