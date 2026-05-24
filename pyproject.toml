@@ -11,17 +11,30 @@
 # ============================================================
 
 [project]
-name = "datafun-02-automation" # CUSTOM: Package distribution name (use lowercase and dashes).
-readme = "README.md"
-requires-python = ">=3.14"
-version = "1.1.0"
+name = "mos-mapper"
+version = "0.1.0"
+description = "Translates U.S. Army MOS codes into civilian job insights and visualizations."
 authors = [
-    { name = "Justice Tefera", email = "justfera30@gmail.com" }
+    { name = "Justice", email = "justfera30@gmail.com" }
 ]
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = ""
+Repository = ""
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+
+
 
 dependencies = [
     # REQ.DEPS: External packages used by the project code.
     "datafun-toolkit",
+    "matplotlib>=3.10.9",
 ]
 
 [project.optional-dependencies]
@@ -158,9 +171,6 @@ convention = "google"   # ALT: "numpy" — choose one, never mix.
 # WHY src/ layout: Prevents accidental imports from the repo root;
 #     ensures consistent behavior across IDEs, tests, CI, and PyPI.
 
-[build-system]
-build-backend = "hatchling.build"
-requires = ["hatchling"]
 
 [tool.hatch.build.targets.wheel]
 # CUSTOM: Must match src/ folders.
