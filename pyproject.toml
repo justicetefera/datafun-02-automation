@@ -20,8 +20,8 @@ authors = [
 requires-python = ">=3.10"
 
 [project.urls]
-Homepage = ""
-Repository = ""
+Homepage = "https://github.com/justicetefera"
+Repository = "https://github.com/justicetefera/datafun-02-automation"
 
 [build-system]
 requires = ["setuptools", "wheel"]
