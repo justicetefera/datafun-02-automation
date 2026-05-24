@@ -24,9 +24,6 @@ PRIVATE-NOTES.md
 *.tmp
 *~
 
-data/output/
-*.txt
-project.log
 
 # === VS Code (special case) ===
 
