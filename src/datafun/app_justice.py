@@ -15,6 +15,9 @@ import time
 
 from datafun.shared import setup_logging
 
+OUTPUT_DIR = Path("data/output/justice")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 # Initialize logging
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -25,7 +28,7 @@ def function_one():
     logger.info("FUNCTION 1: Daily training logs")
     for day in range(1, 4):
         filename = f"justice_training_day_{day}.txt"
-        Path(filename).write_text(f"Training Day {day}: Completed required tasks.")
+        (OUTPUT_DIR / filename).write_text(f"Training Day {day}: Completed required tasks.")
         logger.info(f"Wrote file: {filename}")
 
 
@@ -35,7 +38,7 @@ def function_two():
     tasks = ["inventory", "training", "maintenance"]
     for task in tasks:
         filename = f"justice_{task}.txt"
-        Path(filename).write_text(f"Task completed: {task}")
+        (OUTPUT_DIR / filename).write_text(f"Task completed: {task}")
         logger.info(f"Wrote file: {filename}")
 
 
@@ -46,7 +49,7 @@ def function_three():
     completed = [f"completed_{t}" for t in tasks]
     for item in completed:
         filename = f"justice_{item}.txt"
-        Path(filename).write_text(f"Log entry: {item}")
+        (OUTPUT_DIR / filename).write_text(f"Log entry: {item}")
         logger.info(f"Wrote file: {filename}")
 
 
@@ -56,7 +59,7 @@ def function_four():
     count = 1
     while count <= 3:
         filename = f"justice_duty_{count:02}.txt"
-        Path(filename).write_text(f"Duty cycle entry {count}")
+        (OUTPUT_DIR / filename).write_text(f"Duty cycle entry {count}")
         logger.info(f"Wrote file: {filename}")
         time.sleep(1)
         count += 1

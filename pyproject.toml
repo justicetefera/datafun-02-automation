@@ -15,6 +15,9 @@ name = "datafun-02-automation" # CUSTOM: Package distribution name (use lowercas
 readme = "README.md"
 requires-python = ">=3.14"
 version = "1.1.0"
+authors = [
+    { name = "Justice Tefera", email = "justfera30@gmail.com" }
+]
 
 dependencies = [
     # REQ.DEPS: External packages used by the project code.
