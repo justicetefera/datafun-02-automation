@@ -24,6 +24,9 @@ It is built as a modular Python package using a `src/` layout and runs inside a 
 From the project root, with the virtual environment active:
  `uv run python -m mos_mapper.app_mos_mapper`
 
+ # Trigger CI rerun - Justice workflow test
+
+
 This will:
 
 - Generate MOS text reports in `data/processed/mos_reports/`
