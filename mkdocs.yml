@@ -1,0 +1,17 @@
+site_name: MOS Mapper Docs
+
+nav:
+  - Home: index.md
+
+theme:
+  name: mkdocs
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true

@@ -436,6 +436,15 @@ wheels = [
 name = "mos-mapper"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "mkdocs" },
+    { name = "mkdocs-autorefs" },
+    { name = "mkdocs-get-deps" },
+    { name = "mkdocstrings", extra = ["python"] },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+]
 
 [package.optional-dependencies]
 dev = [
@@ -452,11 +461,18 @@ docs = [
 
 [package.metadata]
 requires-dist = [
+    { name = "mkdocs", specifier = ">=1.6.1" },
+    { name = "mkdocs-autorefs", specifier = ">=1.4.4" },
+    { name = "mkdocs-get-deps", specifier = ">=0.2.2" },
+    { name = "mkdocstrings", extras = ["python"], specifier = ">=1.0.4" },
     { name = "mkdocstrings", extras = ["python"], marker = "extra == 'docs'" },
     { name = "pre-commit", marker = "extra == 'dev'" },
     { name = "pyright", marker = "extra == 'dev'" },
+    { name = "pytest", specifier = ">=9.0.3" },
     { name = "pytest", marker = "extra == 'dev'" },
+    { name = "pytest-cov", specifier = ">=7.1.0" },
     { name = "pytest-cov", marker = "extra == 'dev'" },
+    { name = "ruff", specifier = ">=0.15.12" },
     { name = "ruff", marker = "extra == 'dev'" },
     { name = "zensical", marker = "extra == 'docs'" },
 ]

@@ -1,6 +1,5 @@
 """app_mos_mapper.py - Military MOS to Civilian Job Mapper"""
 
-# === IMPORTS ===
 import logging
 from pathlib import Path
 import sys
@@ -13,8 +12,11 @@ LOG = logging.getLogger("MOS")
 LOG.setLevel(logging.INFO)
 
 console_handler = logging.StreamHandler()
-console_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+console_handler.setFormatter(
+    logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+)
 LOG.addHandler(console_handler)
+
 
 def log_header(logger: logging.Logger, title: str) -> None:
     """Print a formatted header for log sections."""
@@ -71,7 +73,7 @@ MOS_DATA: typing.Final[list[dict]] = [
     },
     {
         "mos": "68W",
-            "title": "Combat Medic Specialist",
+        "title": "Combat Medic Specialist",
         "civilian_jobs": [
             "Medical Assistant",
             "EMT",
@@ -95,6 +97,7 @@ MOS_DATA: typing.Final[list[dict]] = [
 
 # === HELPERS ===
 
+
 def write_text_file(*, path: Path, content: str) -> None:
     """Write text to a file, ensuring directories exist."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -110,6 +113,7 @@ def ensure_visual_dir() -> Path:
 
 
 # === FUNCTION 1: MOS REPORTS ===
+
 
 def generate_mos_reports() -> None:
     LOG.info("FUNCTION 1: generate_mos_reports()")
@@ -131,15 +135,14 @@ def generate_mos_reports() -> None:
             + "\n".join([f" - {job}" for job in jobs])
             + "\n\n"
             f"Average Salary: ${salary:,.0f}\n\n"
-            f"Key Skills:\n"
-            + "\n".join([f" - {skill}" for skill in skills])
-            + "\n"
+            f"Key Skills:\n" + "\n".join([f" - {skill}" for skill in skills]) + "\n"
         )
 
         write_text_file(path=path, content=content)
 
 
 # === FUNCTION 2: SALARY SUMMARY ===
+
 
 def generate_salary_summary() -> None:
     LOG.info("FUNCTION 2: generate_salary_summary()")
@@ -159,6 +162,7 @@ def generate_salary_summary() -> None:
 
 
 # === FUNCTION 3: SKILL SUMMARY ===
+
 
 def generate_skill_summary() -> None:
     LOG.info("FUNCTION 3: generate_skill_summary()")
@@ -182,6 +186,7 @@ def generate_skill_summary() -> None:
 
 # === FUNCTION 4: JOB SUMMARY ===
 
+
 def generate_job_summary() -> None:
     LOG.info("FUNCTION 4: generate_job_summary()")
 
@@ -203,6 +208,7 @@ def generate_job_summary() -> None:
 
 
 # === FUNCTION 5: SALARY BAR CHART ===
+
 
 def generate_salary_chart() -> None:
     LOG.info("FUNCTION 5: generate_salary_chart()")
@@ -226,6 +232,7 @@ def generate_salary_chart() -> None:
 
 
 # === FUNCTION 6: SKILL BAR CHART ===
+
 
 def generate_skill_chart() -> None:
     LOG.info("FUNCTION 6: generate_skill_chart()")
@@ -259,6 +266,7 @@ def generate_skill_chart() -> None:
 
 # === FUNCTION 7: JOB BAR CHART ===
 
+
 def generate_job_chart() -> None:
     LOG.info("FUNCTION 7: generate_job_chart()")
 
@@ -291,6 +299,7 @@ def generate_job_chart() -> None:
 
 # === FUNCTION 8: SALARY PIE CHART ===
 
+
 def generate_salary_pie_chart() -> None:
     LOG.info("FUNCTION 8: generate_salary_pie_chart()")
 
@@ -310,6 +319,7 @@ def generate_salary_pie_chart() -> None:
 
 
 # === FUNCTION 9: SKILL PIE CHART ===
+
 
 def generate_skill_pie_chart() -> None:
     LOG.info("FUNCTION 9: generate_skill_pie_chart()")
@@ -337,6 +347,7 @@ def generate_skill_pie_chart() -> None:
 
 # === FUNCTION 10: JOB PIE CHART ===
 
+
 def generate_job_pie_chart() -> None:
     LOG.info("FUNCTION 10: generate_job_pie_chart()")
 
@@ -360,7 +371,9 @@ def generate_job_pie_chart() -> None:
 
     LOG.info(f"Wrote chart: {chart_path}")
 
+
 # === MAIN ===
+
 
 def main() -> None:
     log_header(LOG, "MOS MAPPER")

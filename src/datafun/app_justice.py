@@ -28,7 +28,9 @@ def function_one():
     logger.info("FUNCTION 1: Daily training logs")
     for day in range(1, 4):
         filename = f"justice_training_day_{day}.txt"
-        (OUTPUT_DIR / filename).write_text(f"Training Day {day}: Completed required tasks.")
+        (OUTPUT_DIR / filename).write_text(
+            f"Training Day {day}: Completed required tasks."
+        )
         logger.info(f"Wrote file: {filename}")
 
 
